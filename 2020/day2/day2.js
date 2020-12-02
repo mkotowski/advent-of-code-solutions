@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var sledRentalPassCount = 0;
+var sledRentalPassCount     = 0;
 var tobogganRentalPassCount = 0;
 
 fs.readFile("input.txt", 'utf8', function (err, data) {
@@ -13,9 +13,9 @@ fs.readFile("input.txt", 'utf8', function (err, data) {
 	for (let record of records) {
 		let requirementsAndPassword = record.split(/[: \-\n]+/);
 		
-		let min = parseInt(requirementsAndPassword[0], 10);
-		let max = parseInt(requirementsAndPassword[1], 10);
-		let letter = requirementsAndPassword[2];
+		let min      = parseInt(requirementsAndPassword[0], 10);
+		let max      = parseInt(requirementsAndPassword[1], 10);
+		let letter   = requirementsAndPassword[2];
 		let password = requirementsAndPassword[3];
 
 		// the sled rental password policy check
